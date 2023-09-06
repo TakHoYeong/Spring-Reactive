@@ -21,7 +21,7 @@ public class Example9_1 {
                         .range(1, tasks)
                         .forEach(n -> sink.next(doTask(n)));
             })
-            .subscribeOn(Schedulers.boundedElastic())
+//            .subscribeOn(Schedulers.boundedElastic())
             .doOnNext(n -> log.info("# create(): {}", n))
             .publishOn(Schedulers.parallel())
             .map(result -> result + " success!")
@@ -35,6 +35,7 @@ public class Example9_1 {
     private static String doTask(int taskNumber) {
         // now tasking.
         // complete to task.
+        log.info("doTask: {}", taskNumber);
         return "task " + taskNumber + " result";
     }
 }

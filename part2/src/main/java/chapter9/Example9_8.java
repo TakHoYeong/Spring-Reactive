@@ -24,6 +24,6 @@ public class Example9_8 {
 
         unicastSink.emitNext(3, FAIL_FAST);
 
-        fluxView.subscribe(data -> log.info("# Subscriber2: {}", data));
+//        fluxView.subscribe(data -> log.info("# Subscriber2: {}", data));
     }
 }
