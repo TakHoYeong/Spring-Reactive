@@ -22,7 +22,7 @@ import java.time.LocalTime;
 public class SpringMvcHeadOfficeApplication {
     private URI baseUri = UriComponentsBuilder.newInstance().scheme("http")
             .host("localhost")
-            .port(8080)
+            .port(5000)
             .path("/v1/books")
             .build()
             .encode()
@@ -57,7 +57,7 @@ public class SpringMvcHeadOfficeApplication {
                 .build()
                 .expand(bookId)
                 .encode()
-                .toUri(); // http://localhost:8080/v1/books/{book-id}
+                .toUri(); // http://localhost:7070/v1/books/{book-id}
 
         ResponseEntity<Book> response =
                 restTemplate.getForEntity(getBooksUri, Book.class);
