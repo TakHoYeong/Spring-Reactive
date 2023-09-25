@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 @Slf4j
 public class Example14_8 {
     public static void main(String[] args) {
-        Path path = Paths.get("D:\\resources\\using_example.txt");
+        Path path = Paths.get("D:\\Class\\using_example.txt");
 
         Flux
             .using(() -> Files.lines(path), Flux::fromStream, Stream::close)
