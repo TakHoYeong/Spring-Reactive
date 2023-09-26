@@ -27,7 +27,7 @@ public class Example12_1 {
         Hooks.onOperatorDebug();
 
         Flux
-                .fromArray(new String[]{"BANANAS", "APPLES", "PEARS", "MELONS"})
+                .fromArray(new String[]{"BANANAS", "APPLES", "PEARS", "GRAPES"})
                 .subscribeOn(Schedulers.boundedElastic())
                 .publishOn(Schedulers.parallel())
                 .map(String::toLowerCase)
